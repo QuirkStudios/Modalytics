@@ -5,7 +5,6 @@ stages:
   - deploy
 
 cache:
-  key: ${CI_COMMIT_REF_SLUG}
   paths:
     - node_modules/
 
@@ -24,7 +23,7 @@ pages:
     - yarn:install
   script:
     - npm run build
-    - mv apps/docs/out public
+    - mv apps/docs/out/* public
   artifacts:
     paths:
       - public
