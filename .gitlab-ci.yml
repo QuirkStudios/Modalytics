@@ -25,8 +25,9 @@ pages:
     - yarn:install
   script:
     - npm run build
+    - mv apps/docs/out public
   artifacts:
     paths:
-      - apps/docs/out
+      - public
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
