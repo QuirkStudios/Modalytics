@@ -13,6 +13,7 @@ cache:
 yarn:install:
   stage: build
   script:
+    - npm i turbo -g
     - yarn install --check-files --non-interactive
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
