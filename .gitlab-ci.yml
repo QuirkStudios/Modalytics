@@ -23,7 +23,8 @@ pages:
     - yarn:install
   script:
     - npm run build
-    - mv apps/docs/out/* public
+    - mkdir public
+    - mv apps/docs/out/* public/
   artifacts:
     paths:
       - public
